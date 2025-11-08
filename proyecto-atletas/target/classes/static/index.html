@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Atletas - Spring Boot API</title>
+    <style>
+
+        body { font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f4; }
+        .container { max-width: 600px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        input, button { width: 100%; padding: 10px; margin-bottom: 10px; box-sizing: border-box; }
+        button { background-color: #007bff; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        #message { margin-top: 15px; padding: 10px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Registro de Nuevo Atleta</h1>
+
+    <form id="athlete-form">
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="number" id="edad" placeholder="Edad" required>
+        <input type="text" id="disciplina" placeholder="Disciplina (ej: Natación)" required>
+        <input type="text" id="departamento" placeholder="Departamento (ej: Petén)" required>
+
+        <button type="submit">Registrar Atleta</button>
+    </form>
+
+    <div id="message"></div>
+
+    <h2>Lista de Atletas Registrados</h2>
+    <button id="load-athletes">Cargar Atletas</button>
+    <div id="athletes-list"></div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
